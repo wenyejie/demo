@@ -144,6 +144,15 @@ export default Vue.extend({
       type: String,
       default: ''
     }
+  },
+  created (): void {
+    alert('fuck me!')
+  },
+  methods: {
+    handleClick (): number {
+      console.log()
+      return 1
+    }
   }
 })
 </script>
