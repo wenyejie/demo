@@ -10,7 +10,8 @@
 </template>
 
 <script lang="ts">
-import { arrFindByProp, isDate, isJSON, isNull } from '@/utils'
+import { isDate, isJSON, isNull } from '@/utils'
+import { arrFindByProp } from '@/utils/array'
 
 export default {
   name: 'Demo',

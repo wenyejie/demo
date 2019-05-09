@@ -12,10 +12,10 @@ enum StorageName {
 }
 
 const storage = (name: StorageName): Object => {
-  const s = window[`${name}Storage`]
+  const s: Storage = window[`${name}Storage`]
   return {
     get (key: string): any {
-      return (JSON.parse(s.getItem(key)) || emptyObject).value
+      return (JSON.parse(s.getItem(key) || '0') || emptyObject).value
     },
 
     set (key: string, value: any): void {
