@@ -13,3 +13,5 @@ export * from './storage'
 export * from './array'
 
 export * from './date'
+
+export * from './regexp'
