@@ -5,6 +5,7 @@
  */
 import { isUndefined } from './common'
 
+// 移除数组子项
 export const arrRemove = (array: Array<any>, item: any): Array<any> => {
   if (Array.isArray(array) && array.length) {
     const index = array.indexOf(item)
@@ -15,6 +16,7 @@ export const arrRemove = (array: Array<any>, item: any): Array<any> => {
   return array
 }
 
+// 数组属性切换
 export const arrToogle = (array: Array<any>, item: any): Array<any> => {
   if (Array.isArray(array) && array.length) {
     const index = array.indexOf(item)
