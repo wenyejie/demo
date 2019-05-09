@@ -4,6 +4,8 @@
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
     // "allowJs": true,
     // "checkJs": true,
     "importHelpers": true,
