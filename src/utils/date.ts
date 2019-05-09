@@ -4,7 +4,7 @@
  * @email: wenyejie@foxmail.com
  */
 
-export const monthLength = (date: Date = new Date()): Number => {
+export const monthLength = (date: Date = new Date()): number => {
   const val: Date = new Date(date)
   val.setMonth(val.getMonth() + 1, 0)
   return val.getDate()
