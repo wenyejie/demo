@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { arrFindByProp } from '@/utils'
+import { arrFindByProp, isDate, isJSON, isNull } from '@/utils'
 
 export default {
   name: 'Demo',
@@ -26,7 +26,13 @@ export default {
         age: 29
       }
     ]
-    console.log(arrFindByProp(list, 'name', 'wenyejie', 'age'))
+    console.log(`arrFindByProp => `, arrFindByProp(list, 'name', 'wenyejie', 'age'))
+
+    console.log(`isJSON => `, isJSON(list))
+
+    console.log(`isNull => `, isNull(null), isNull(1))
+
+    console.log(`isDate => `, isDate(new Date()), isDate(new Date('aaaa')))
   },
   methods: {}
 }

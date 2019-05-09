@@ -49,6 +49,61 @@ export const isRegExp = (val: any): boolean => {
   return toRawType(val) === 'RegExp'
 }
 
+export const isDate = (val: any): boolean => {
+  return toRawType(val) === 'Date' && !!+val
+}
+
+export const isPlainDate = (val: any): boolean => {
+  return toRawType(val) === 'Date'
+}
+
+export const isString = (val: any): boolean => {
+  return toRawType(val) === 'String'
+}
+
+export const isElement = (val: any): boolean => {
+  return val && val.nodeType === 1
+}
+
+export const isNull = (val: any): boolean => {
+  return toRawType(val) === 'Null'
+}
+
+export const isFunction = (val: any): boolean => {
+  return toRawType(val) === 'Function'
+}
+
+export const isNumber = (val: any): boolean => {
+  return toRawType(val) === 'Number' && !Number.isNaN(val)
+}
+
+export const isPlainNumber = (val: any): boolean => {
+  return toRawType(val) === 'Number'
+}
+
+// 是否为自然数, 即: 0, 1, 2, 3, ......
+export const isNaturalNumber = (val: any): boolean => {
+  return Number.isInteger(val) && val >= 0
+}
+
+export const isJSON = (val: any): boolean => {
+  try {
+    JSON.stringify(val)
+    return isObject(val)
+  } catch (e) {
+    return false
+  }
+}
+
+export const isJSONString = (val: any): boolean => {
+  try {
+    JSON.parse(val)
+    return isString(val)
+  } catch (e) {
+    return false
+  }
+}
+
 export const isPromise = (val: any): boolean => {
   return isDefined(val) && typeof val.then === 'function' && typeof val.catch === 'function'
 }
