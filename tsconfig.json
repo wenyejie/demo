@@ -4,8 +4,8 @@
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
-    "allowJs": true,
-    "checkJs": true,
+    // "allowJs": true,
+    // "checkJs": true,
     "importHelpers": true,
     "noImplicitAny": false, // 不允许any(*)导出
     "moduleResolution": "node",
