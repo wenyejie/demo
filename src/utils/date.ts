@@ -64,6 +64,7 @@ export const convert = (date: any, defVal: any = ''): Date | string => {
   return <Date>date
 }
 
+// 格式化
 export const format = (date: any, format: string = 'YYYY-MM-DD hh:mm:ss'): string => {
   date = convert(date)
 
