@@ -47,17 +47,17 @@ export const convert = (date: Date | string | number, defVal: any = ''): Date | 
       return defVal
     }
 
-    const length: number = (date + '').length
-
-    if (length < 13) {
+    if ((date + '').length < 13) {
       date = zeroize(<number>date, 13, {
         pos: 'after',
         rtnType: 'number'
       })
     }
+  }
 
-    date = new Date(date)
-  } else {
+  date = new Date(date)
+
+  if (!isDate(date)) {
     return defVal
   }
 
