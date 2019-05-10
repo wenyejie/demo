@@ -4,7 +4,6 @@
  * @email: wenyejie@foxmail.com
  */
 import { camelize, isElement } from '@/utils/common'
-import { PseudoElementName } from 'enmus.ts'
 
 // 判断是否支持CSS属性和值
 export const support = (attrName: string, attrVal?: number | string): boolean => {

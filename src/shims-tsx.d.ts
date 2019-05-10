@@ -10,4 +10,15 @@ declare global {
       [elem: string]: any
     }
   }
+
+  // 伪元素名称
+  export enum PseudoElementName {
+    BEFORE = 'before',
+    AFTER = 'after'
+  }
+
+  export interface ZeroizeOpts {
+    pos: string
+    rtnType: string
+  }
 }

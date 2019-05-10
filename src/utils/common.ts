@@ -4,8 +4,6 @@
  * @email: wenyejie@foxmail.com
  */
 
-import { ZeroizeOptsPos, ZeroizeOpts, ZerioizeOptsRtnType } from './common.d'
-
 export const emptyObject: Object = Object.freeze({})
 
 export const nullObject = (): Object => {
@@ -168,8 +166,8 @@ export const once = (fn: Function): Function => {
 // 补零
 export const zeroize = (num: number | string, len = 2, opts?: ZeroizeOpts): string | number => {
   opts = opts || {
-    pos: ZeroizeOptsPos.BEFORE,
-    rtnType: ZerioizeOptsRtnType.STRING
+    pos: 'before',
+    rtnType: 'string'
   }
   // 获取当前number长度
   const l: number = (num + '').length
