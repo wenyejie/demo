@@ -4,6 +4,7 @@
  * @email: wenyejie@foxmail.com
  */
 import { isDate, isNumber, zeroize } from '@/utils/common'
+import { ZerioizeOptsRtnType, ZeroizeOptsPos } from './common.d'
 
 export const monthLength = (date: Date = new Date()): number => {
   const val: Date = new Date(date)
@@ -49,8 +50,8 @@ export const convert = (date: any, defVal: any = ''): Date | string => {
 
     if ((date + '').length < 13) {
       date = zeroize(<number>date, 13, {
-        pos: 'after',
-        rtnType: 'number'
+        pos: ZeroizeOptsPos.AFTER,
+        rtnType: ZerioizeOptsRtnType.NUMBER
       })
     }
   }
