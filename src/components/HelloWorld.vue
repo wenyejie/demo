@@ -146,7 +146,6 @@ export default Vue.extend({
     }
   },
   created (): void {
-    alert('fuck me!')
   },
   methods: {
     handleClick (): number {

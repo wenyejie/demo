@@ -13,6 +13,7 @@
 import { isDate, isJSON, isNull } from '@/utils'
 import { arrFindByProp } from '@/utils/array'
 import { convert } from '@/utils/date'
+import router from '@/router'
 
 export default {
   name: 'Demo',
@@ -22,6 +23,7 @@ export default {
     }
   },
   created (): void {
+    router.push('/')
     const list: object[] = [
       {
         name: 'wenyejie',
