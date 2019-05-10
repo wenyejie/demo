@@ -12,6 +12,7 @@
 <script lang="ts">
 import { isDate, isJSON, isNull } from '@/utils'
 import { arrFindByProp } from '@/utils/array'
+import { convert } from '@/utils/date'
 
 export default {
   name: 'Demo',
@@ -34,6 +35,8 @@ export default {
     console.log(`isNull => `, isNull(null), isNull(1))
 
     console.log(`isDate => `, isDate(new Date()), isDate(new Date('aaaa')))
+
+    console.log(`convert => `, convert(1557396136895), convert(1557396136))
   },
   methods: {}
 }
