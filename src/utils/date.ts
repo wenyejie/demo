@@ -24,7 +24,7 @@ export const isOneYear = (date1: Date, date2: Date = new Date()): boolean => {
 }
 
 // 转换成date类型
-export const convert = (date: Date | string | number, defVal: any = ''): Date | string => {
+export const convert = (date: any, defVal: any = ''): Date | string => {
   if (isDate(date)) {
     return <Date>date
   }
@@ -62,4 +62,53 @@ export const convert = (date: Date | string | number, defVal: any = ''): Date | 
   }
 
   return <Date>date
+}
+
+export const format = (date: any, format: string = 'YYYY-MM-DD hh:mm:ss'): string => {
+  date = convert(date)
+
+  if (!date) {
+    return ''
+  }
+
+  return format.replace(/"[^"]*"|'[^']*'|\b(?:D{1,2}|d{1,3}|m{1,4}|YY(?:YY)?|([hHMstT])\1?|[lLZ])\b/g, (str: string) => {
+    switch (str) {
+      case 'YYYY':
+        return date.getFullYear()
+      case 'YY':
+        return date.getFullYear() % 100
+      case 'MM':
+        return zeroize(date.getMonth() + 1)
+      case 'M':
+        return date.getMonth() + 1
+      case 'DD':
+        return zeroize(date.getDate())
+      case 'D':
+        return date.getDate()
+      case 'hh':
+        return zeroize(date.getHours())
+      case 'h':
+        return date.getHours()
+      case 'mm':
+        return zeroize(date.getMinutes())
+      case 'm':
+        return date.getMinutes()
+      case 'ss':
+        return zeroize(date.getSeconds())
+      case 's':
+        return date.getSeconds()
+      case 'd':
+        return date.getDay()
+      case 'dd':
+        return '\u5468' + ['\u65E5', '\u4E00', '\u4E8C', '\u4E09', '\u56DB', '\u4E94', '\u516D'][date.getDay()]
+      case 'ddd':
+        return '\u661F\u671F' + ['\u65E5', '\u4E00', '\u4E8C', '\u4E09', '\u56DB', '\u4E94', '\u516D'][date.getDay()]
+      case 'tt':
+        return date.getHours() < 12 ? 'am' : 'pm'
+      case 'TT':
+        return date.getHours() < 12 ? 'AM' : 'PM'
+      case 't':
+        return date.getHours() < 12 ? '\u4E0A\u5348' : '\u4E0B\u5348'
+    }
+  })
 }
