@@ -162,3 +162,31 @@ export const once = (fn: Function): Function => {
     }
   }
 }
+
+interface ZeroizeOpts {
+  pos: string
+  rtnType: string
+}
+
+// 补零
+export const zeroize = (num: number | string, len = 2, opts?: ZeroizeOpts): string | number => {
+  opts = opts || {
+    pos: 'before',
+    rtnType: 'string'
+  }
+  // 获取当前number长度
+  const l: number = (num + '').length
+
+  // 如果当前number长度大于目标长度则退出
+  if (l >= len) {
+    return num + ''
+  }
+
+  let temp = ''
+  for (let i = 0; i < len - l; ++i) {
+    temp += '0'
+  }
+  temp = opts.pos === 'before' ? temp + num : num + temp
+
+  return opts.rtnType === 'string' ? temp : parseInt(temp)
+}
