@@ -25,7 +25,7 @@ npm run test
 npm run lint
 ```
 
-### Preview dist when build
+### [Preview dist when build](https://cli.vuejs.org/zh/guide/deployment.html#%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88)
 ```
 npm run dist
 ```
