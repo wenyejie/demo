@@ -47,7 +47,6 @@ export default Vue.extend({
     handleSubmit (): void {
       login(this.login)
         .then(() => {
-          alert('登录成功!')
         })
     }
   }
