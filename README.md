@@ -25,6 +25,11 @@ npm run test
 npm run lint
 ```
 
+### Preview dist when build
+```
+npm run dist
+```
+
 ### Run your end-to-end tests
 ```
 npm run test:e2e
