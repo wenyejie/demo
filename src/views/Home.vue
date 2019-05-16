@@ -1,21 +1,31 @@
 <template>
   <div class="home">
-    <img
-      alt="Vue logo"
-      src="../assets/logo.png"
-    >
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <Article class="home__article" />
+    <Article class="home__article" />
+    <Article class="home__article" />
+    <Article class="home__article" />
+    <Article class="home__article" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
+import Article from '../components/aritcle'
 
 export default Vue.extend({
   name: 'Home',
   components: {
-    HelloWorld
+    Article
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.home {
+  margin: 40px 0 120px;
+
+  &__article:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, .0785)
+  }
+}
+</style>

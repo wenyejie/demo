@@ -1,4 +1,4 @@
-# vue-cli-demo
+# webapp(开始了解项目之前请先阅读此文档)
 
 ## Project setup
 ```
@@ -42,3 +42,8 @@ npm run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 相关规范
+- [Class命名请使用BEM命名规范](https://segmentfault.com/a/1190000012705634)
+- [请阅读并熟练运用VUE风格指南](https://cn.vuejs.org/v2/style-guide/)
+- 调整基础脚手架/或者基础配置的时候应通知全体前端开发人员

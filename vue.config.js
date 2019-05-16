@@ -1,6 +1,6 @@
 module.exports = {
   css: {
-    modules: true,
+    modules: false,
     sourceMap: true
   },
 

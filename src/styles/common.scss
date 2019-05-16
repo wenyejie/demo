@@ -1,0 +1,29 @@
+@charset "utf-8";
+/**
+ * common
+ *
+ * author: Storm
+ * date: 2017/08/06
+ */
+
+body {
+  font: 20px/1.5 "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(0, 0, 0, .84);
+}
+
+a {
+  color: #c00;
+  transition: color .3s ease;
+
+  &:hover {
+    color: #686868;
+  }
+}
+
+.content {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}

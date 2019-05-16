@@ -1,14 +1,14 @@
 {
-  "name": "vue-cli-demo",
-  "short_name": "vue-cli-demo",
+  "name": "webapp",
+  "short_name": "webapp",
   "icons": [
     {
-      "src": "./img/icons/android-chrome-192x192.png",
-      "sizes": "192x192",
+      "src": "./img/logo-256.jpg",
+      "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "./img/icons/android-chrome-512x512.png",
+      "src": "./img/logo-512.jpg",
       "sizes": "512x512",
       "type": "image/png"
     }

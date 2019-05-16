@@ -1,24 +1,16 @@
 <template>
   <div id="app">
-    <router-link to="/login">
-      login
-    </router-link>
-    <router-link to="/about">
-      about
-    </router-link>
-    <router-link to="/demo">
-      demo
-    </router-link>
-    <router-view />
+    <Header />
+    <Main><router-view /></Main>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-</style>
+<script lang="ts">
+import Vue from 'vue'
+import Header from './components/header'
+import Main from './components/main'
+
+export default Vue.extend({
+  components: { Header, Main }
+})
+</script>
