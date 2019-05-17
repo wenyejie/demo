@@ -47,3 +47,14 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - [Class命名请使用BEM命名规范](https://segmentfault.com/a/1190000012705634)
 - [请阅读并熟练运用VUE风格指南](https://cn.vuejs.org/v2/style-guide/)
 - 调整基础脚手架/或者基础配置的时候应通知全体前端开发人员
+
+
+2019.5.16
+今日工作内容
+1.参与版本评审
+2.UI调整
+
+是否有延期风险：无
+
+明日工作计划：
+1.UI调整

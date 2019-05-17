@@ -14,6 +14,7 @@ import { isDate, isJSON, isNull } from '@/utils'
 import { arrFindByProp } from '@/utils/array'
 import { convert } from '@/utils/date'
 import router from '@/router'
+import watemark from '../cores/watermark'
 
 export default {
   name: 'Demo',
@@ -39,6 +40,9 @@ export default {
     console.log(`isDate => `, isDate(new Date()), isDate(new Date('aaaa')))
 
     console.log(`convert => `, convert(1557396136895), convert(1557396136))
+  },
+  mounted () {
+    watemark.set('Hello Watermark!')
   },
   methods: {}
 }

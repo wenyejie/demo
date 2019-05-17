@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   css: {
     modules: false,
@@ -6,5 +8,7 @@ module.exports = {
 
   devServer: {
     port: 8080
-  }
+  },
+
+  lintOnSave: 'error'
 }
