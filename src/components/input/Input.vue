@@ -30,6 +30,10 @@ export default Vue.extend({
     type: {
       type: String,
       default: 'text'
+    },
+    block: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -42,6 +46,11 @@ export default Vue.extend({
       return Object.assign(nullObject(), this.$listeners, {
         input: () => this.$emit('input', this.innerVal)
       })
+    },
+    classes () {
+      return {
+        [`s-input__block`]: this.block
+      }
     }
   },
   watch: {

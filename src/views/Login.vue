@@ -1,26 +1,31 @@
 <template>
   <div class="login">
     <h1>登录</h1>
-    <form
-      novalidate
-      autocomplete
-    >
-      <s-input
-        v-model="login.username"
-        placeholder="请输入用户名"
-      />
-      <s-input
-        v-model="login.password"
-        type="password"
-        placeholder="请输入密码"
-      />
-      <s-button
-        type="primary"
-        @click="handleSubmit"
-      >
-        登 录
-      </s-button>
-    </form>
+    <s-form>
+      <s-form-item>
+        <s-input
+          v-model="login.username"
+          placeholder="请输入用户名"
+        />
+      </s-form-item>
+
+      <s-form-item>
+        <s-input
+          v-model="login.password"
+          type="password"
+          placeholder="请输入密码"
+        />
+      </s-form-item>
+
+      <s-form-item>
+        <s-button
+          type="primary"
+          @click="handleSubmit"
+        >
+          登 录
+        </s-button>
+      </s-form-item>
+    </s-form>
   </div>
 </template>
 

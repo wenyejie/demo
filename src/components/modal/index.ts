@@ -4,6 +4,4 @@
  * @email: wenyejie@foxmail.com
  */
 
-const Modal = () => import('./Modal.vue')
-
-export default Modal
+export default () => import('./Modal.vue')

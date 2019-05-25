@@ -9,11 +9,14 @@ import { VueConstructor } from 'vue'
 import SModal from './modal'
 import SInput from './input'
 import SButton from './button'
+import { SForm, SFormItem } from './form'
 
 const components = {
   SModal,
   SInput,
-  SButton
+  SButton,
+  SForm,
+  SFormItem
 }
 
 const install = (Vue: VueConstructor) => {
