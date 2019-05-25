@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --modern --report",
-    "inspect": "vue inspect > webpack.config.js",
+    "inspect": "vue inspect > webpack-config.js",
     "lint": "vue-cli-service lint",
     "dist": "serve -s dist",
     "test:e2e": "vue-cli-service test:e2e",
