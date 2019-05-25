@@ -17,7 +17,7 @@ import router from '@/router'
 import watemark from '../cores/watermark'
 
 export default {
-  name: 'Demo',
+  name: 'VDemo',
   data (): object {
     return {
       name: 'storm'

@@ -13,7 +13,7 @@ import Vue from 'vue'
 import Article from '../components/aritcle'
 
 export default Vue.extend({
-  name: 'Home',
+  name: 'VHome',
   components: {
     Article
   }

@@ -34,7 +34,7 @@ import Vue from 'vue'
 import { login } from '@/apis'
 
 export default Vue.extend({
-  name: 'Login',
+  name: 'VLogin',
   data () {
     return {
       login: {

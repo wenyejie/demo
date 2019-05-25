@@ -7,7 +7,7 @@ import Vue from 'vue'
 import SArticle from '../components/aritcle'
 
 export default Vue.extend({
-  name: 'Article',
+  name: 'VArticle',
   components: {
     SArticle
   }
