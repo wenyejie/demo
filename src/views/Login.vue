@@ -1,33 +1,28 @@
 <template>
   <div class="login">
-    <h1>This is an login page</h1>
+    <h1>登录</h1>
     <form
       novalidate
       autocomplete
     >
-      <input
+      <s-input
         v-model="login.username"
-        type="text"
         placeholder="请输入用户名"
-      >
-      <input
+      />
+      <s-input
         v-model="login.password"
         type="password"
         placeholder="请输入密码"
-      >
-      <button
-        type="button"
+      />
+      <s-button
+        type="primary"
         @click="handleSubmit"
       >
         登 录
-      </button>
+      </s-button>
     </form>
   </div>
 </template>
-
-<style lang="scss" scoped>
-
-</style>
 
 <script lang="ts">
 import Vue from 'vue'
@@ -45,10 +40,15 @@ export default Vue.extend({
   },
   methods: {
     handleSubmit (): void {
-      login(this.login)
-        .then(() => {
-        })
+      login(this.login).then(() => {
+      })
     }
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.login {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+}
+</style>

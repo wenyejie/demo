@@ -52,10 +52,6 @@ export default Vue.extend({
   padding: 40px 0;
   max-width: 700px;
 
-  &__header {
-
-  }
-
   &__info {
     color: #777777;
     font-size: 16px;
