@@ -4,7 +4,10 @@
  - @email: wenyejie@foxmail.com
  -->
 <template>
-  <div class="s-input">
+  <div
+    class="s-input"
+    :class="classes"
+  >
     <input
       v-model="innerVal"
       :type="type"
@@ -49,7 +52,7 @@ export default Vue.extend({
     },
     classes () {
       return {
-        [`s-input__block`]: this.block
+        's-input_block': this.block
       }
     }
   },
@@ -68,6 +71,10 @@ export default Vue.extend({
 .s-input {
   position: relative;
   display: inline-block;
+
+  &_block {
+    width: 100%;
+  }
 
   &__inner {
     border-radius: 3px;

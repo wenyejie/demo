@@ -26,16 +26,31 @@
           记录代码, 记录生活, 记录世界
         </h2>-->
       </div>
-      <div class="header__right" />
+      <div class="header__right">
+        <a
+          href="javascript:;"
+          class="header__logout"
+          @click="handleLogout"
+        >退出登录</a>
+      </div>
     </div>
   </header>
 </template>
 
 <script>
 import Vue from 'vue'
+import { logout } from '../../apis'
 
 export default Vue.extend({
-  name: 'SHeader'
+  name: 'SHeader',
+  methods: {
+    handleLogout () {
+      logout()
+        .then(() => {
+          console.log('登出成功')
+        })
+    }
+  }
 })
 </script>
 
@@ -86,6 +101,15 @@ export default Vue.extend({
   &__subtitle {
     color: #666666;
     letter-spacing: 10px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logout {
+    padding: 5px;
   }
 }
 </style>

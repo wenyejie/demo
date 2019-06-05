@@ -1,10 +1,13 @@
 <template>
   <div class="login">
-    <h1>登录</h1>
+    <h1 class="login__title">
+      登录
+    </h1>
     <s-form>
       <s-form-item>
         <s-input
           v-model="login.username"
+          block
           placeholder="请输入用户名"
         />
       </s-form-item>
@@ -12,6 +15,7 @@
       <s-form-item>
         <s-input
           v-model="login.password"
+          block
           type="password"
           placeholder="请输入密码"
         />
@@ -20,6 +24,7 @@
       <s-form-item>
         <s-button
           type="primary"
+          block
           @click="handleSubmit"
         >
           登 录
@@ -32,6 +37,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { login } from '@/apis'
+import router from '../router'
 
 export default Vue.extend({
   name: 'VLogin',
@@ -46,6 +52,7 @@ export default Vue.extend({
   methods: {
     handleSubmit (): void {
       login(this.login).then(() => {
+        router.push('/')
       })
     }
   }
@@ -54,6 +61,18 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .login {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  &__title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .s-form-item {
+    margin-bottom: 30px;
+  }
 }
 </style>

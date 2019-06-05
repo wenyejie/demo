@@ -8,7 +8,7 @@ import axios, { AxiosInstance } from 'axios'
 import { stringify } from 'qs'
 
 const instance: AxiosInstance = axios.create({
-  baseURL: '//localhost:8002',
+  baseURL: '//localhost:8004',
   timeout: 30000,
   withCredentials: true,
   headers: {

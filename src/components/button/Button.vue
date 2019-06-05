@@ -8,6 +8,7 @@
     :class="classes"
     :type="nativeType"
     class="s-button"
+    @click="handleClick"
   >
     <slot />
   </button>
@@ -29,13 +30,23 @@ export default Vue.extend({
       validator (val: string): boolean {
         return [ 'button', 'submit', 'reset' ].includes(val)
       }
+    },
+    block: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     classes () {
       return {
-        [`s-button__${this.type}`]: this.type
+        [`s-button_${this.type}`]: this.type,
+        's-button_block': !!this.block
       }
+    }
+  },
+  methods: {
+    handleClick (event) {
+      this.$emit('click', event)
     }
   }
 })
@@ -56,7 +67,12 @@ export default Vue.extend({
   border-radius: 3px;
   transition: all .3s ease-in-out;
 
-  &__primary {
+  &_block {
+    display: block;
+    width: 100%;
+  }
+
+  &_primary {
     color: #fff;
     background-color: #409eff;
     border-color: #409eff;
