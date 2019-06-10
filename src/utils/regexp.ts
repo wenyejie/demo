@@ -4,7 +4,17 @@
  * @email: wenyejie@foxmail.com
  */
 
-export const tel: RegExp = /^1\d{10}$/
+// 手机
+export const mobile: RegExp = /^1\d{10}$/
+
+// 座机
+export const tel: RegExp = /^(0\d{2,3}-)?\d{7,8}$/
+
+// 座机含分机号
+export const telExt: RegExp = /^(0\d{2,3}-)?\d{7,8}(-\d{3,})?$/
+
+// 联系方式
+export const phone: RegExp = /(^1\d{10}$)|(^(0\d{2,3}-)?\d{7,8}(-\d{3,})?$)/
 
 export const emoji: RegExp = /[\uD83C\uD83D\uD83E][\uDC00-\uDFFF][\u200D|\uFE0F]|[\uD83C|\uD83D\uD83E][\uDC00-\uDFFF]|[0-9|*#]\uFE0F\u20E3|[0-9|#]\u20E3|[\u203C-\u3299]\uFE0F\u200D|[\u203C-\u3299]\uFE0F|[\u2122-\u2B55]|\u303D|(A9|AE)\u3030|uA9|uAE|\u3030/ig
 
