@@ -86,6 +86,11 @@ export const isNaturalNumber = (val: any): boolean => {
   return Number.isInteger(val) && val >= 0
 }
 
+// 是否为正整数, 即: 1, 2, 3, 4, 5
+export const isPositiveInteger = (val: any): boolean => {
+  return isNaturalNumber(val) && val !== 0
+}
+
 export const isJSON = (val: any): boolean => {
   try {
     JSON.stringify(val)
